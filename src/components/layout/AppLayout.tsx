@@ -1,6 +1,7 @@
 
 import { ReactNode } from "react";
-import { Dumbbell } from "lucide-react";
+import { Dumbbell, Users } from "lucide-react";
+import { Link } from "react-router-dom";
 
 interface AppLayoutProps {
   children: ReactNode;
@@ -18,6 +19,10 @@ const AppLayout = ({ children }: AppLayoutProps) => {
               <h1 className="text-xl font-bold text-gray-900">FitTrack</h1>
             </div>
             <div className="flex items-center gap-4">
+              <Link to="/community" className="text-sm text-gray-600 hover:text-purple-600 flex items-center gap-1">
+                <Users className="h-4 w-4" />
+                Community
+              </Link>
               <button className="text-sm text-gray-600 hover:text-purple-600">
                 Settings
               </button>
